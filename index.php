@@ -15,7 +15,6 @@
                 </div>
             </div>  
         </div>           
-yesye
 
 
 <?php require 'pages/footer.php' ;?>
