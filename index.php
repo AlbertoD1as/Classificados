@@ -1,4 +1,4 @@
- <?php include 'pages/header.php'; ?>
+ <?php require 'pages/header.php'; ?>
 
         <div class="container-fluid">
             <div class="jumbotron">
