@@ -16,7 +16,7 @@ if(empty($_SESSION['cLogin'])) {
         <label for="categoria">Categoria:</label>
         <select name="categoria" id="categoria" class="form-control">
         <?php
-            require 'C:/xampp/htdocs/classificados/classescategorias.classs.php';
+            require 'classes/categorias.class.php';
             $c = new Categorias();
             $cats = $c->getLista();
             foreach($cats as $cat);
