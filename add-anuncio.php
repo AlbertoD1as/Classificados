@@ -24,7 +24,7 @@ if(empty($_SESSION['cLogin'])) {
             <option value="<?php echo $cat['id']; ?>"><?php echo utf8_encode($cat['nome']); ?>
             </option>
         <?php
-        t_endforeach
+        t_endforeach;
         ?>
         
            
@@ -49,6 +49,7 @@ if(empty($_SESSION['cLogin'])) {
              <option value="0">Ruim</option>
              <option value="1">Bom</option>
              <option value="2">Ótimo</option>
+             <option value="3">Novo</option>
      </select>
     </div>
     <input type="submit" value="Adicionar" class="btn btn-default" />
