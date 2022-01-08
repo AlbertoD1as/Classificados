@@ -21,10 +21,10 @@ if(empty($_SESSION['cLogin'])) {
             $cats = $c->getLista();
             foreach($cats as $cat);
         ?>
-            <option value="<?php echo $cat['id']; ?>"><?php echo $cat['nome']; ?>
+            <option value="<?php echo $cat['id']; ?>"><?php echo utf8_encode($cat['nome']); ?>
             </option>
         <?php
-        T_endforeach;
+        t_endforeach
         ?>
         
            
