@@ -6,6 +6,23 @@ if(empty($_SESSION['cLogin'])) {
     <?php
     exit;
 }
+require 'classes/anuncios.class.php';
+$a = new Anuncios();
+if(isset($_POST['titulo']) && !empty($_POST['titulo'])) {
+    $titulo = addslashes($_POST['titulo']);
+    $categoria = addslashes($_POST['categoria']);
+    $valor = addslashes($_POST['valor']);
+    $descricao = addslashes($_POST['descricao']);
+    $estado = addslashes($_POST['estado']);
+
+    $a->addAnuncio($titulo, $categoria, $valor, $descricao, $estado);
+
+?>
+<div class="alert alert-success">
+    Produto adicionado com sucesso!
+</div>
+<?php
+}
 ?>
 <div class="container">
     <h1>Meus Anúncios - Adcionar Anúncio</h1>
@@ -49,7 +66,7 @@ if(empty($_SESSION['cLogin'])) {
              <option value="0">Ruim</option>
              <option value="1">Bom</option>
              <option value="2">Ótimo</option>
-             <option value="3">Novo</option>
+            
      </select>
     </div>
     <input type="submit" value="Adicionar" class="btn btn-default" />
